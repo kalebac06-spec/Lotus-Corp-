@@ -1,0 +1,113 @@
+/* Reset & base */
+* { margin:0; padding:0; box-sizing:border-box; }
+body { font-family: 'Roboto', sans-serif; background:#ffffff; color:#333; line-height:1.7; }
+a { text-decoration:none; color:inherit; }
+
+/* Header */
+header { display:flex; justify-content:space-between; align-items:center; padding:20px 50px; background:#ffffff; border-bottom:1px solid #e0e0e0; position:sticky; top:0; z-index:1000; }
+.logo { font-size:42px; font-weight:700; color:#2673cc; padding:10px 20px; border-radius:30px; background:rgba(51,153,255,0.15); }
+nav a { margin-left:30px; font-weight:500; color:#555; transition:0.3s; }
+nav a:hover { color:#2673cc; }
+
+/* Hero */
+.hero { background: url('https://images.unsplash.com/photo-1542223616-5e98213c64f3?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat; height:90vh; display:flex; justify-content:center; align-items:center; text-align:center; position:relative; }
+.hero::after { content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(255,255,255,0.25); }
+.hero-content { position:relative; max-width:800px; color:#2673cc; }
+.hero h1 { font-size:48px; margin-bottom:25px; }
+.hero p { font-size:20px; margin-bottom:30px; color:#555; }
+.hero a { background:#2673cc; color:#fff; padding:15px 35px; border-radius:5px; font-weight:600; transition:0.3s; }
+.hero a:hover { background:#2673cc; }
+
+/* About */
+.about { display:flex; flex-wrap:wrap; padding:80px 50px; gap:40px; align-items:center; }
+.about img { flex:1; max-width:500px; border-radius:10px; }
+.about-text { flex:1; max-width:650px; }
+.about-text h2 { font-size:36px; margin-bottom:20px; color:#2673cc; }
+.about-text p { font-size:18px; margin-bottom:15px; color:#555; }
+
+/* Projects */
+.projects { background:#f8fafd; padding:80px 50px; text-align:center; }
+.projects h2 { font-size:36px; margin-bottom:40px; color:#2673cc; }
+.project-cards { display:flex; flex-wrap:wrap; gap:30px; justify-content:center; }
+.card { background:#fff; border-radius:10px; flex:1 1 300px; max-width:350px; box-shadow:0 6px 15px rgba(0,0,0,0.1); transition:0.3s; overflow:hidden; }
+.card:hover { transform:translateY(-5px); box-shadow:0 10px 20px rgba(0,0,0,0.15); }
+.card img { width:100%; height:200px; object-fit:cover; }
+.card h3 { font-size:24px; margin:15px 20px 10px; color:#2673cc; }
+.card p { font-size:16px; margin:0 20px 20px; color:#555; }
+
+/* Additional section */
+.additional { padding:80px 50px; text-align:center; }
+.additional h2 { font-size:36px; margin-bottom:25px; color:#2673cc; }
+.additional p { font-size:18px; max-width:800px; margin:0 auto 40px; color:#555; }
+.additional img { width:100%; max-width:1000px; border-radius:10px; }
+
+/* Footer */
+footer { background:#f5f7fa; text-align:center; padding:30px 50px; border-top:1px solid #e0e0e0; color:#555; }
+footer a { color:#2673cc; transition:0.3s; }
+footer a:hover { color:#2673cc; }
+
+/* About Section - bubble style */
+.about {
+    display: flex;
+    justify-content: center;
+    padding: 80px 20px;
+    background: #f8fafd;
+}
+
+.about-bubble {
+    position: relative;
+    max-width: 800px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 25px;
+    padding: 60px 40px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    color: #555;
+    overflow: hidden;
+}
+
+.about-bubble h2 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: #3399ff;
+}
+
+.about-bubble p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+
+/* Background image inside bubble */
+.about-bubble::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('https://images.unsplash.com/photo-1569601437111-67f8c6d3c4b2?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+    opacity: 0.08; /* faint background */
+    z-index: 0;
+    border-radius: 25px;
+}
+
+.about-bubble * {
+    position: relative; /* keep text above the image */
+    z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width:900px){
+    .about-bubble {
+        padding: 40px 20px;
+    }
+}
+
+
+/* Responsive */
+@media (max-width:900px){
+    .about { flex-direction:column; text-align:center; }
+    .about img, .about-text { max-width:100%; }
+    .project-cards { flex-direction:column; }
+}
